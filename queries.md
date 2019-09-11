@@ -13,11 +13,11 @@ on P.CategoryId = C.CategoryId;
 
 ### Display all ProductNames and Quantities placed on order 10251. Sort by ProductName. Shows 3 records.
 
-SELECT ProductName, Quantity, OrderID FROM OrderDetails JOIN Products ON OrderDetails.ProductID = Products.ProductID WHERE OrderDetails.OrderID = 10251 ORDER BY Products.ProductName;
+SELECT ProductName, Quantity FROM OrderDetails JOIN Products ON OrderDetails.ProductID = Products.ProductID WHERE OrderDetails.OrderID = 10251 ORDER BY Products.ProductName;
 
 ### Display the OrderID, CustomerName and the employee's LastName for every order. All columns should be labeled clearly. Displays 196 records.
 
-SELECT OrderID, CustomerName, LastName FROM Orders JOIN Customers ON Orders.CustomerID = Customers.CustomerID JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID;
+SELECT OrderID as [Order ID], CustomerName as [Customer Name], LastName as [Employee Last Name] FROM Orders JOIN Customers ON Orders.CustomerID = Customers.CustomerID JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID;
 
 ### (Stretch)  Displays CategoryName and a new column called Count that shows how many products are in each category. Shows 9 records.
 
