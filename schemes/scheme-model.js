@@ -15,4 +15,13 @@ function findSteps(id) {
             .select('st.id','sc.scheme_name', 'st.step_number', 'st.instructions')
 }
 
-module.exports = {find, findById, findSteps}
+function add(schemeData) {
+    return db('schemes').insert(schemeData)
+}
+
+function update(changes, id) {
+    return db('schemes').where({id}).update(changes)
+}
+
+
+module.exports = {find, findById, findSteps, add, update}
