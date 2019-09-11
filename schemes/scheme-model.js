@@ -4,4 +4,8 @@ function find() {
     return db('schemes')
 }
 
-module.exports = {find}
+function findById(id) {
+    return db('schemes').where({id})
+}
+
+module.exports = {find, findById}
